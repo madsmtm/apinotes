@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  fmt:
+    name: Check formatting
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use system Rust
+      run: cargo --version
+
+    - name: Check formatting
+      run: cargo fmt -- --check
+
+  lint:
+    name: Lint
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use system Rust
+      run: cargo --version
+
+    - name: cargo doc
+      run: cargo doc --no-deps --document-private-items
+
+    - name: cargo clippy
+      run: cargo clippy --all-targets
+
+  test:
+    name: Test
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use system Rust
+      run: cargo --version
+
+    - name: cargo test
+      run: cargo test

@@ -1,0 +1,16 @@
+[package]
+name = "apinotes"
+# Remember to update html_root_url in lib.rs and README.md
+version = "0.0.0"
+authors = ["Mads Marquart <mads@marquart.dk>"]
+edition = "2021"
+
+description = "Parsing clang API notes"
+keywords = ["api-notes", "clang", "swift", "apple"]
+categories = ["config", "parser-implementations"]
+readme = "README.md"
+repository = "https://github.com/madsmtm/objc2"
+documentation = "https://docs.rs/apinotes/"
+license = "Zlib OR Apache-2.0 OR MIT"
+
+[dependencies]
