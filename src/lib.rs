@@ -13,7 +13,7 @@
 #![warn(clippy::cargo)]
 #![warn(clippy::ptr_as_ptr)]
 // Update in Cargo.toml as well.
-#![doc(html_root_url = "https://docs.rs/apinotes/0.0.0")]
+#![doc(html_root_url = "https://docs.rs/apinotes/0.0.1")]
 
 #[cfg(test)]
 mod clang_tests;
