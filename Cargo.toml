@@ -1,6 +1,6 @@
 [package]
 name = "apinotes"
-# Remember to update html_root_url in lib.rs and README.md
+# Remember to update html_root_url in lib.rs
 version = "0.0.0"
 authors = ["Mads Marquart <mads@marquart.dk>"]
 edition = "2021"
@@ -14,3 +14,5 @@ documentation = "https://docs.rs/apinotes/"
 license = "Zlib OR Apache-2.0 OR MIT"
 
 [dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_yaml = "0.9"
